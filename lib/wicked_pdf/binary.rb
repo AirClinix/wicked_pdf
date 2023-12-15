@@ -38,7 +38,9 @@ class WickedPdf
     def retrieve_binary_version
       _stdin, stdout, _stderr = Open3.popen3(@path + ' -V')
       parse_version_string(stdout.gets(nil))
-    rescue StandardError
+    rescue StandardError => e
+      puts "An error occurred retrieving the binary version of wkhtmltopdf: #{e}"
+      puts "The default version will be expected (#{DEFAULT_BINARY_VERSION})"
       default_version
     end
 
