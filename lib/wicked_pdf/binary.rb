@@ -14,7 +14,7 @@ class WickedPdf
     end
 
     def version
-      @version ||= retrieve_binary_version
+      @version ||= retrieve_binary_version.tap { puts("Binary version of wkhtmltopdf was found to be: #{_1}") }
     end
 
     def parse_version_string(version_info)
