@@ -18,7 +18,7 @@ require 'wicked_pdf/middleware'
 require 'wicked_pdf/progress'
 
 class WickedPdf
-  DEFAULT_BINARY_VERSION = Gem::Version.new('0.9.9')
+  DEFAULT_BINARY_VERSION = Gem::Version.new('0.12.6')
   @@config = {}
   cattr_accessor :config
 
